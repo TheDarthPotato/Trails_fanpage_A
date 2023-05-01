@@ -1,0 +1,199 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: lightblue;
+    font-family: Arial, Helvetica, sans-serif;
+    /*comentario*/
+}
+
+/*Responsividad*/
+
+/*Para hacer una fila de elementos y que sea responsiva, meterlos en un <div class="row">*/
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+/*Dentro de dicha row, se indica el tamaño de cada elemento. Entre todos deben sumar col 12.*/
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+  }
+
+@media only screen and (min-width: 600px) {
+    /* For tablets: */
+    .col-s-1 {width: 8.33%;}
+    .col-s-2 {width: 16.66%;}
+    .col-s-3 {width: 25%;}
+    .col-s-4 {width: 33.33%;}
+    .col-s-5 {width: 41.66%;}
+    .col-s-6 {width: 50%;}
+    .col-s-7 {width: 58.33%;}
+    .col-s-8 {width: 66.66%;}
+    .col-s-9 {width: 75%;}
+    .col-s-10 {width: 83.33%;}
+    .col-s-11 {width: 91.66%;}
+    .col-s-12 {width: 100%;}
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+
+/*Se deshace de las filas de elementos en los moviles*/
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    [class*="col-"] {
+      width: 100%;
+    }
+}
+
+/*estetica*/
+
+/*contenedor de toda la pagina; header, navegacion y articulos*/
+#contenedor{
+    width: 100%;
+    margin: 0% auto;
+}
+
+/*Header*/
+header{
+    background: darkcyan;
+    background-image: url(./images/Bleublanc_-_S-Craft_29.webp);
+    background-repeat: no-repeat;
+    background-size: 150px;
+    /*height: 100px;*/
+    width: 100%;
+    margin: 0px;
+    text-align: center;
+    line-height: 75px;
+    color: lightcyan;
+    border-bottom: 4px solid springgreen;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/*Para que las imagenes no se salgan del contenedor general*/
+img{
+    max-width: 100%;
+    max-height: auto;
+}
+
+/*Barra de navegacion*/
+nav{
+    background: black;
+    height: 50px;
+}
+
+/*ul{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+nav ul li{
+    float: left;
+    list-style: none;
+    margin: 1%;
+}
+
+
+li a, li a:visited{
+    color:lightblue;
+    text-decoration:none;
+    
+}
+
+li a:hover{
+    color:aqua;
+}
+
+/*Separacion entre barra de navegacion y articulos*/
+.clearfix{
+    clear:both;
+}
+
+/*Contenedor general de los articulos*/
+#contenido{
+    float:left;
+    /*width: 80%;*/
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+
+}
+
+/*Interior de articlos, generico*/
+h2{
+    text-decoration: underline;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-bottom: 20px;
+}
+
+.articulo {
+    margin-bottom: 30px;
+}
+
+.scaleimg1{
+    display:block;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.liberl{
+    background-color: aqua;
+}
+
+.crossbell{
+    background-color: greenyellow;
+}
+
+.erebonia{
+    background-color: palevioletred;
+}
+
+.calvard{
+    background-color: orange;
+}
+
+.nayuta{
+    background-color: pink;
+}
+
+.titulo{
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: larger;
+}
+
+.tituloGrande{
+    text-decoration: underline;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    text-align: center;
+}
